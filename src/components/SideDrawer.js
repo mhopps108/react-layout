@@ -1,49 +1,33 @@
 import React, { useState, useEffect } from "react";
+import styled, { css } from "styled-components";
 
-const styles = {
-  sidedrawerANI: {
-    position: "fixed",
-    width: "200px",
-    maxWidth: "70%",
-    height: "100%",
-    left: "0",
-    top: "0",
-    zIndex: "200",
-    background: "white",
-    padding: "32px 16px",
-    boxSizing: "border-box",
-    transition: "transform 0.3s ease-out",
-    transform: "translateX(-100%)"
-  },
-  open: {
-    transform: "translateX(0) !important"
-  },
-  close: {
-    transform: "translateX(-100%)"
-  }
-};
-
-function SideDrawer({ isOpen, toggleSideDrawer }) {
-  // const addClass = isOpen ? "open" : "close";
-  // const addClass = isOpen ? styles.open : {};
-
-  useEffect(() => {
-    // styles.sidedrawerANI.transform = isOpen
-    //   ? "translateX(0)"
-    //   : "translateX(-100%)";
-    const move = isOpen
-      ? { transform: "translateX(0)" }
-      : { transform: "translateX(-100%)" };
-    styles.sidedrawerANI = { ...styles.sidedrawerANI, ...move };
-  }, [isOpen]);
-
+export default function SideDrawer({ isOpen, toggleSideDrawer }) {
   return (
-    // <div style={{ ...styles.sidedrawerANI, ...addClass }}>
-    <div style={styles.sidedrawerANI}>
+    <StyledSideDrawer isOpen={isOpen}>
       <button onClick={toggleSideDrawer}>X</button>
       <div>SideDrawer</div>
-    </div>
+    </StyledSideDrawer>
   );
 }
 
-export default SideDrawer;
+const StyledSideDrawer = styled.div`
+  position: fixed;
+  width: 200px;
+  max-width: 70%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  background: white;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-out;
+  ${props =>
+    props.isOpen
+      ? css`
+          transform: translateX(0);
+        `
+      : css`
+          transform: translateX(-100%);
+        `}
+`;

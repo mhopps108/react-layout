@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "./styles.css";
-import { Header, SideDrawer } from "./components";
+import { Header, SideDrawer, Content, Toolbar, Footer } from "./components";
+import styled, { css } from "styled-components";
+// import "./styles.css";
 
 export default function App() {
   const [sideDrawerVisable, setSideDrawerVisable] = useState(false);
@@ -10,18 +11,14 @@ export default function App() {
   };
   return (
     <div className="App">
-      <h1>The grid-area Property</h1>
-      <div class="grid-container">
-        <Header toggleSideDrawer={toggleSideDrawer} />
-        <SideDrawer
-          isOpen={sideDrawerVisable}
-          toggleSideDrawer={toggleSideDrawer}
-        />
-        {/* <div class="sidebar">Sidebar</div> */}
-        <div class="toolbar">Toolbar</div>
-        <div class="main">Main</div>
-        <div class="footer">Footer</div>
-      </div>
+      <Header toggleSideDrawer={toggleSideDrawer} />
+      <SideDrawer
+        isOpen={sideDrawerVisable}
+        toggleSideDrawer={toggleSideDrawer}
+      />
+      <Toolbar />
+      <Content />
+      <Footer />
     </div>
   );
 }
