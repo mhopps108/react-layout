@@ -1,11 +1,8 @@
 {
-  "name": "react",
+  "name": "react-layout",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": [
-    "react",
-    "starter"
-  ],
+  "description": "",
+  "keywords": [],
   "main": "src/index.js",
   "dependencies": {
     "babel-plugin-styled-components": "1.10.6",
