@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components/macro";
+import styled, { css } from "styled-components/macro";
 
 const StyledHeader = styled.div`
   border: 1px solid green;
@@ -22,6 +22,11 @@ const Navbar = styled.nav`
 
 const NavGroup = styled.div`
   border: 1px solid red;
+  ${props =>
+    props.hideOnPhone &&
+    css`
+      display: none;
+    `}
 `;
 
 const NavLink = styled.a`
@@ -38,7 +43,7 @@ export default function Header({ toggleSideDrawer }) {
           <button onClick={toggleSideDrawer}>open</button>
           <button>MMDb</button>
         </NavGroup>
-        <NavGroup>
+        <NavGroup hideOnPhone>
           <NavLink href="_blank">List</NavLink>
           <NavLink href="_blank">Discovery</NavLink>
           <NavLink href="_blank">Releases</NavLink>

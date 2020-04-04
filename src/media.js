@@ -9,3 +9,5 @@ export const media = {
   tablet: `(min-width: ${size.tablet})`,
   desktop: `(min-width: ${size.desktop})`
 };
+
+// @media (min-width: 768px) and (max-width: 1170px) {
