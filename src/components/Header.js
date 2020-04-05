@@ -38,12 +38,12 @@ const NavLink = styled.a`
   font-size: 1.3rem;
 `;
 
-export default function Header({ toggleSideDrawer }) {
+export default function Header({ toggleDrawer }) {
   return (
     <StyledHeader>
       <Navbar>
         <NavGroup>
-          <button onClick={toggleSideDrawer}>open</button>
+          <button onClick={toggleDrawer}>open</button>
           <button>MMDb</button>
         </NavGroup>
         <NavGroupPages>

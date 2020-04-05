@@ -12,14 +12,14 @@ const StyledApp = styled.div`
 
 export default function App() {
   const [drawerVisable, setDrawerVisable] = useState(false);
-  const toggleSideDrawer = () => {
+  const toggleDrawer = () => {
     console.log("toggleSideDrawer clicked - App");
     setDrawerVisable(!drawerVisable);
   };
   return (
     <StyledApp>
-      <Header toggleSideDrawer={toggleSideDrawer} />
-      <Main />
+      <Header toggleDrawer={toggleDrawer} />
+      <Main drawerVisable={drawerVisable} toggleDrawer={toggleDrawer} />
       <Footer />
     </StyledApp>
   );

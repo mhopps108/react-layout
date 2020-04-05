@@ -22,11 +22,11 @@ const StyledMain = styled.div`
   }
 `;
 
-export default function Main({ drawerVisable, toggleSideDrawer }) {
+export default function Main({ drawerVisable, toggleDrawer }) {
   return (
     <StyledMain>
       <Toolbar />
-      <SideDrawer isOpen={drawerVisable} toggleOpen={toggleSideDrawer} />
+      <SideDrawer isOpen={drawerVisable} toggleOpen={toggleDrawer} />
       <Content />
     </StyledMain>
   );

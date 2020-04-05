@@ -5,11 +5,21 @@ import { device } from "../devices";
 export default function SideDrawer({ isOpen, toggleOpen }) {
   return (
     <StyledSideDrawer isOpen={isOpen}>
-      <button onClick={toggleOpen}>X</button>
+      <CloseButton onClick={toggleOpen}>X</CloseButton>
       <div>SideDrawer</div>
     </StyledSideDrawer>
   );
 }
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  @media ${device.min.desktop} {
+    display: none;
+  }
+`;
 
 const StyledSideDrawer = styled.div`
   @media ${device.max.desktop} {
@@ -18,7 +28,7 @@ const StyledSideDrawer = styled.div`
     max-width: 70%;
     height: 100%;
     left: 0;
-    top: 0;
+    top: 55px;
     z-index: 200;
     background: white;
     padding: 32px 16px;
