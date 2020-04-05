@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components/macro";
+import { device } from "../devices";
 
 const StyledHeader = styled.div`
   border: 1px solid green;
@@ -22,11 +23,13 @@ const Navbar = styled.nav`
 
 const NavGroup = styled.div`
   border: 1px solid red;
-  ${props =>
-    props.hideOnPhone &&
-    css`
-      display: none;
-    `}
+`;
+
+const NavGroupPages = styled(NavGroup)`
+  display: none;
+  @media ${device.min.tablet} {
+    display: flex;
+  }
 `;
 
 const NavLink = styled.a`
@@ -43,11 +46,11 @@ export default function Header({ toggleSideDrawer }) {
           <button onClick={toggleSideDrawer}>open</button>
           <button>MMDb</button>
         </NavGroup>
-        <NavGroup hideOnPhone>
+        <NavGroupPages>
           <NavLink href="_blank">List</NavLink>
           <NavLink href="_blank">Discovery</NavLink>
           <NavLink href="_blank">Releases</NavLink>
-        </NavGroup>
+        </NavGroupPages>
         <NavGroup>
           <button>Search</button>
           <button>Settings</button>

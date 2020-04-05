@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
+import { device } from "../devices";
 
 const StyledFooter = styled.div`
   position: fixed;
@@ -9,6 +10,9 @@ const StyledFooter = styled.div`
   height: 50px;
   background-color: blue;
   display: flex;
+  @media ${device.min.tablet} {
+    display: none;
+  }
 `;
 
 export default function Footer({ tempProps }) {
