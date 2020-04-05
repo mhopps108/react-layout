@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components/macro";
 import { device } from "../devices";
 
-export default function SideDrawer({ isOpen, toggleSideDrawer }) {
+export default function SideDrawer({ isOpen, toggleOpen }) {
   return (
     <StyledSideDrawer isOpen={isOpen}>
-      <button onClick={toggleSideDrawer}>X</button>
+      <button onClick={toggleOpen}>X</button>
       <div>SideDrawer</div>
     </StyledSideDrawer>
   );

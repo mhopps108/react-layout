@@ -1,7 +1,8 @@
 import Header from "./Header";
-import SideDrawer from "./SideDrawer";
-import Content from "./Content";
-import Toolbar from "./Toolbar";
 import Footer from "./Footer";
+import Main from "./Main";
+import SideDrawer from "./SideDrawer";
+import Toolbar from "./Toolbar";
+import Content from "./Content";
 
-export { Header, SideDrawer, Content, Toolbar, Footer };
+export { Header, Footer, Main, Toolbar, SideDrawer, Content };

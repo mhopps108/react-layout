@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components/macro";
 
 const StyledToolbar = styled.div`
+  grid-area: toolbar;
   border: 1px solid green;
   background-color: yellow;
-  margin-top: 55px;
+  /* margin-top: 55px; */
   height: 45px;
   display: flex;
 `;
