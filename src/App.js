@@ -9,8 +9,12 @@ const StyledApp = styled.div`
   /* flex-direction: column; */
   /* background: black; */
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 55px 45px 1fr 45px;
+  grid-template-areas:
+    "header"
+    "toolbar"
+    "main";
+  /* grid-template-columns: 1fr; */
+  /* grid-template-rows: 55px 45px 1fr 45px; */
 
   @media ${device.min.table} {
     display: grid;
@@ -19,8 +23,11 @@ const StyledApp = styled.div`
   }
   @media ${device.min.desktop} {
     display: grid;
-    grid-template-columns: 200px 800px;
-    grid-template-rows: 55px 45px 1fr;
+    grid-template-areas:
+      "header header"
+      "sidedrawer toolbar"
+      "sidedrawer main"
+      "sidedrawer main";
   }
 `;
 

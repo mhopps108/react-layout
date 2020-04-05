@@ -34,13 +34,14 @@ const StyledSideDrawer = styled.div`
           `}
   }
   @media ${device.min.desktop} {
-    position: fixed;
+    grid-area: sidedrawer;
+    /* position: fixed; */
     display: flex;
     width: 200px;
     max-width: 70%;
     height: 100%;
-    left: 0;
-    top: 0;
+    /* left: 0; */
+    /* top: 0; */
     background: white;
     padding: 32px 16px;
   }
