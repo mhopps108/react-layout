@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header, SideDrawer, Content, Toolbar, Footer } from "./components";
+import { Header, Main, Footer } from "./components";
 import styled, { css } from "styled-components";
 // import "./styles.css";
 import { device } from "./devices";
@@ -19,9 +19,7 @@ export default function App() {
   return (
     <StyledApp>
       <Header toggleSideDrawer={toggleSideDrawer} />
-      <SideDrawer isOpen={drawerVisable} toggleSideDrawer={toggleSideDrawer} />
-      <Toolbar />
-      <Content />
+      <Main />
       <Footer />
     </StyledApp>
   );
