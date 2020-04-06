@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import styled, { css } from "styled-components/macro";
+import React from "react";
+import styled from "styled-components/macro";
 import { Toolbar, SideDrawer, Content } from "./";
 import { device } from "../devices";
 

@@ -3,10 +3,15 @@ import styled, { css } from "styled-components/macro";
 import { device } from "../devices";
 
 export default function SideDrawer({ isOpen, toggleOpen }) {
+  const tmdblist = ["Popular", "New Releases", "Upcoming", "Top Rated"];
   return (
     <StyledSideDrawer isOpen={isOpen}>
       <CloseButton onClick={toggleOpen}>X</CloseButton>
       <div>SideDrawer</div>
+      <h4>TMDb</h4>
+      {tmdblist.map(item => {
+        return <p key={item}>{item}</p>;
+      })}
     </StyledSideDrawer>
   );
 }

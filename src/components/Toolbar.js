@@ -3,11 +3,12 @@ import styled from "styled-components/macro";
 
 const StyledToolbar = styled.div`
   grid-area: toolbar;
-  border: 1px solid green;
-  background-color: yellow;
-  /* margin-top: 55px; */
+  position: sticky;
+  top: 0;
   height: 45px;
   display: flex;
+  border: 1px solid green;
+  background-color: yellow;
 `;
 
 export default function Toolbar({ tempProps }) {
