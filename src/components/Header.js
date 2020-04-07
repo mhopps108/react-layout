@@ -31,14 +31,26 @@ export default function Header({ toggleDrawer }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPos(document.body.getBoundingClientRect().top);
-      setShowNav(document.body.getBoundingClientRect().top > scrollPos);
+      let temp = window.pageYOffset;
+      setShowNav(scrollPos > temp);
+      setScrollPos(temp);
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", () => handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollPos(document.body.getBoundingClientRect().top);
+  //     setShowNav(document.body.getBoundingClientRect().top > scrollPos);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", () => handleScroll);
+  //   };
+  // }, []);
 
   return (
     <StyledHeader show={showNav} ref={ref}>
