@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components/macro";
+import styled, { css } from "styled-components/macro";
 import { Toolbar, SideDrawer, Content } from "./";
 import { device } from "../devices";
 
@@ -28,7 +28,7 @@ const StyledMain = styled.div`
 
 export default function Main({ drawerVisable, toggleDrawer }) {
   return (
-    <StyledMain>
+    <StyledMain drawerVisable={drawerVisable}>
       <Toolbar />
       <SideDrawer isOpen={drawerVisable} toggleOpen={toggleDrawer} />
       <Content />

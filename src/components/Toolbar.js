@@ -12,7 +12,5 @@ const StyledToolbar = styled.div`
 `;
 
 export default function Toolbar({ tempProps }) {
-  return (
-    <StyledToolbar>Popular - Top Rated - Now Playing - Upcomming</StyledToolbar>
-  );
+  return <StyledToolbar>List * Releases * Discovery</StyledToolbar>;
 }
