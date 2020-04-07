@@ -4,7 +4,11 @@ import { Toolbar, SideDrawer, Content } from "./";
 import { device } from "../devices";
 
 const StyledMain = styled.div`
+  border: 2px solid purple;
+  /* position: sticky; */
+  /* top: 0; */
   margin-top: 55px;
+  /* height: 100vh; */
   display: grid;
   grid-template-areas:
     "toolbar"

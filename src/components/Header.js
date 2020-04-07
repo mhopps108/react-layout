@@ -71,6 +71,9 @@ const Navbar = styled.nav`
 `;
 
 const NavGroup = styled.div`
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-content: center; */
   border: 1px solid red;
 `;
 

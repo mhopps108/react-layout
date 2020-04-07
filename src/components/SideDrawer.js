@@ -12,6 +12,18 @@ export default function SideDrawer({ isOpen, toggleOpen }) {
       {tmdblist.map(item => {
         return <p key={item}>{item}</p>;
       })}
+      <h4>IMDb</h4>
+      {tmdblist.map(item => {
+        return <p key={item}>{item}</p>;
+      })}
+      <h4>Trakt</h4>
+      {tmdblist.map(item => {
+        return <p key={item}>{item}</p>;
+      })}
+      <h4>More</h4>
+      {tmdblist.map(item => {
+        return <p key={item}>{item}</p>;
+      })}
     </StyledSideDrawer>
   );
 }
@@ -27,17 +39,25 @@ const CloseButton = styled.button`
 `;
 
 const StyledSideDrawer = styled.div`
+  border: 1px solid orange;
+  position: sticky;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 32px 16px;
+
   @media ${device.max.desktop} {
+    // hidden
     position: fixed;
     width: 200px;
-    max-width: 70%;
-    height: 100%;
     left: 0;
     top: 55px;
+    /* top: 0px; */
     z-index: 200;
-    background: white;
-    padding: 32px 16px;
-    box-sizing: border-box;
+
     transition: transform 0.3s ease-out;
     ${props =>
       props.isOpen
@@ -49,15 +69,12 @@ const StyledSideDrawer = styled.div`
           `}
   }
   @media ${device.min.desktop} {
+    // shown
     grid-area: sidedrawer;
-    /* position: fixed; */
-    display: flex;
-    width: 200px;
-    max-width: 70%;
-    height: 100%;
+
+    /* height: 100vh; */
+    /* width: 200px; */
     /* left: 0; */
-    /* top: 0; */
-    background: white;
-    padding: 32px 16px;
+    /* top: 55px; */
   }
 `;
