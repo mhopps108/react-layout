@@ -12,5 +12,7 @@ const StyledToolbar = styled.div`
 `;
 
 export default function Toolbar({ tempProps }) {
-  return <StyledToolbar>Toolbar</StyledToolbar>;
+  return (
+    <StyledToolbar>Popular - Top Rated - Now Playing - Upcomming</StyledToolbar>
+  );
 }

@@ -40,10 +40,12 @@ const CloseButton = styled.button`
 
 const StyledSideDrawer = styled.div`
   border: 1px solid orange;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
+  bottom: 0;
   height: 100%;
-  overflow-y: auto;
+  /* width: 200px; */
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   background: white;
@@ -71,7 +73,7 @@ const StyledSideDrawer = styled.div`
   @media ${device.min.desktop} {
     // shown
     grid-area: sidedrawer;
-
+    position: fixed;
     /* height: 100vh; */
     /* width: 200px; */
     /* left: 0; */
